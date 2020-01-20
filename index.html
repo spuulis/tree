@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recursion</title>
+
+    <script src="fib.js"></script>
+    <script src="canvas.js"></script>
+    <script src="square.js"></script>
+    <script src="carpet.js"></script>
+    <script src="sierPoly.js"></script>
+    <script src="tools.js"></script>
+    <script src="tree.js"></script>
+    <script src="loop.js"></script>
+    <script src="onload.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body onload="onload()">
+    <table>
+        <th>
+            <canvas id="canvas" width="512" height="512"></canvas>
+        </th>
+        <th>
+            <table>
+                <tr>
+                    <th>Radius:</th>
+                    <th><input type="range" id="sl-radius"></th>
+                    <th><input type="number" id="nb-radius" value="128"><br></th>
+                    <th><input type="checkbox"id="cb-radiusauto">Auto</th>
+                </tr>
+                <tr>
+                    <th>Theta:</th>
+                    <th><input type="range" id="sl-theta"></th>
+                    <th><input type="number" id="nb-theta" value="30"></th>
+                    <th><input type="checkbox"id="cb-thetaauto">Auto</th>
+                </tr>
+                <tr>
+                    <th>Branches:</th>
+                    <th><input type="range" id="sl-branches"></th>
+                    <th><input type="number" id="nb-branches" value="2"></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>Dilution</th>
+                    <th><input type="range" id="sl-dilution"></th>
+                    <th><input type="number" id="nb-dilution" step="0.01" value="0.5"></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>Levels:</th>
+                    <th><input type="range" id="sl-levels"></th>
+                    <th><input type="number" id="nb-levels" value="3"></th>
+                    <th></th>
+                </tr>
+            </table>
+            <br>
+            <button onclick="drawTree()">Generate</button>
+            <button onclick="clearCanvas()">Clear</button><br>
+            <label><input type="checkbox" checked="checked" id="autogen">Auto Generate</label>
+        </th>
+    </table>
+</body>
+</html>
